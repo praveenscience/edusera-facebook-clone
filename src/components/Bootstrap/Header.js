@@ -1,11 +1,23 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ dark, children, className }) => {
+  dark = !!dark ? "dark" : "light";
   return (
-    <nav className="Header navbar navbar-light bg-light">
+    <nav
+      className={
+        `navbar navbar-${dark} bg-${dark}` + (className ? " " + className : "")
+      }
+    >
       <div className="container">
         <a className="navbar-brand" href="/">
-          <img src="/logo512.png" alt="" width="30" height="24" />
+          <img
+            src="/logo512.png"
+            alt={children + " Logo"}
+            width="30"
+            height="24"
+            className="me-2"
+          />
+          {children}
         </a>
       </div>
     </nav>
