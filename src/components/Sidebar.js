@@ -26,14 +26,14 @@ const Sidebar = () => {
     ],
     Shortcuts: [
       {
-        Link: "/",
+        Link: "https://rb.gy/movl7r",
         Icon: "web",
         Text: "Personal Website"
       }
     ],
     Explore: [
       {
-        Link: "/",
+        Link: "https://rb.gy/fupw21",
         Icon: "yt",
         Text: "YouTube Channel"
       }
@@ -56,6 +56,8 @@ const Sidebar = () => {
                 <a
                   href={link.Link}
                   className={link.Icon === "news" ? "active" : null}
+                  target={link.Link !== "/" ? "_blank" : null}
+                  rel="noreferrer"
                 >
                   <span className={"Sprite-" + link.Icon} />
                   {link.Text}
