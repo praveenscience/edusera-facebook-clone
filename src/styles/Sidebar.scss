@@ -46,10 +46,11 @@
         padding-left: 28px;
         text-decoration: none;
         span {
-          left: 3px;
+          left: 4px;
+          top: 4px;
           position: absolute;
           display: inline-block;
-          transform: scale(4%);
+          transform: scale(3.5%);
           transform-origin: 0 0;
         }
       }
