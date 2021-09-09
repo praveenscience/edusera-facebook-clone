@@ -1,0 +1,16 @@
+.Sidebar {
+  .UserMeta {
+    a {
+      text-decoration: none;
+      color: #000;
+      img {
+        margin-right: 5px;
+        width: 1.5em;
+        border-radius: 100%;
+        border: 1px solid rgba(#000, 0.5);
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+}
