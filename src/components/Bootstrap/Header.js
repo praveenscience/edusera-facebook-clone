@@ -10,13 +10,7 @@ const Header = ({ dark, children, className }) => {
     >
       <div className="container">
         <a className="navbar-brand" href="/">
-          <img
-            src="/logo512.png"
-            alt={children + " Logo"}
-            width="30"
-            height="24"
-            className="me-2"
-          />
+          <img src="/logo512.png" alt={children + " Logo"} className="me-2" />
           {children}
         </a>
       </div>
