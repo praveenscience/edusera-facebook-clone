@@ -34,16 +34,17 @@
         display: block;
         border: 1px solid #eaeaea;
         border-radius: 5px;
+        color: #333;
         &.active,
         &:hover {
           border: 1px solid #ddd;
           background-color: rgba(#fff, 0.75);
+          color: #000;
         }
         position: relative;
         padding: 3px;
         padding-left: 28px;
         text-decoration: none;
-        color: #333;
         span {
           left: 3px;
           position: absolute;
