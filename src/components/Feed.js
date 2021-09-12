@@ -1,3 +1,4 @@
+import Card from "./Bootstrap/Card";
 import FBBox from "./FBBox";
 
 const Feed = () => {
@@ -56,7 +57,40 @@ const Feed = () => {
         </div>
       </FBBox>
       <FBBox>
-        <div className="FeedsContainer">Feeds</div>
+        <div className="FeedsContainer">
+          <h4>News Feed</h4>
+          <ul>
+            {[
+              {
+                Image: "https://i.imgur.com/nOT5zBD.jpeg"
+              },
+              {
+                Image: "https://i.imgur.com/BipVIkJ.jpeg"
+              },
+              {
+                Image: "https://i.imgur.com/ZM5xWH9.jpeg"
+              },
+              {
+                Image: "https://i.imgur.com/Kjd7ny4.jpeg"
+              },
+              {
+                Image: "https://i.imgur.com/hLqq0M7.jpeg"
+              },
+              {
+                Image: "https://i.imgur.com/HLsczhZ.jpeg"
+              }
+            ].map((card, key) => (
+              <li key={key}>
+                <Card Image={card.Image} ImgAlign="top">
+                  <a href="/">Some Cute Cat Stuff</a>
+                  <p className="m-0 text-muted">
+                    Posted <abbr title="12th Sunday September 2021">today</abbr>
+                  </p>
+                </Card>
+              </li>
+            ))}
+          </ul>
+        </div>
       </FBBox>
     </div>
   );
