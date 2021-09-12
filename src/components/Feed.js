@@ -58,7 +58,7 @@ const Feed = () => {
       </FBBox>
       <FBBox>
         <div className="FeedsContainer">
-          <h4>News Feed</h4>
+          <h4 className="m-0">News Feed</h4>
           <ul>
             {[
               {
@@ -69,15 +69,6 @@ const Feed = () => {
               },
               {
                 Image: "https://i.imgur.com/ZM5xWH9.jpeg"
-              },
-              {
-                Image: "https://i.imgur.com/Kjd7ny4.jpeg"
-              },
-              {
-                Image: "https://i.imgur.com/hLqq0M7.jpeg"
-              },
-              {
-                Image: "https://i.imgur.com/HLsczhZ.jpeg"
               }
             ].map((card, key) => (
               <li key={key}>
