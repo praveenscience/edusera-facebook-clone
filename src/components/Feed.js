@@ -13,7 +13,9 @@ const Feed = () => {
       </FBBox>
       <FBBox>
         <div className="PagesContainer">
-          <h4>Your Pages (2)</h4>
+          <h4>
+            Your Pages <span>(2)</span>
+          </h4>
           <ul>
             <li>
               <img src="https://i.imgur.com/SrTKlVe.png" alt="Edusera" />
