@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import Header from "./Bootstrap/Header";
-import FBBox from "./FBBox";
 import Sidebar from "./Sidebar";
 
 class App extends Component {
@@ -12,7 +11,6 @@ class App extends Component {
           <div className="row">
             <Sidebar />
             <div className="col-7">Middle</div>
-            <div className="col-3">Right</div>
           </div>
         </div>
       </div>
