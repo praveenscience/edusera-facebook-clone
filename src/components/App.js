@@ -5,6 +5,10 @@ import Main from "./Main";
 import Sidebar from "./Sidebar";
 
 class App extends Component {
+  state = {
+    UserData: {},
+    FeedData: []
+  };
   render() {
     return (
       <div className="App">
