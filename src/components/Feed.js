@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Card from "./Bootstrap/Card";
 import FBBox from "./FBBox";
 
-const Feed = ({ Birthdays, Pages }) => {
+const Feed = ({ Birthdays, Pages, NewsFeeds }) => {
   return (
     <div className="col-3 Feed">
       {Birthdays.length > 0 && (
@@ -54,33 +54,26 @@ const Feed = ({ Birthdays, Pages }) => {
           </div>
         </FBBox>
       )}
-      <FBBox>
-        <div className="FeedsContainer">
-          <h4 className="m-0">News Feed</h4>
-          <ul>
-            {[
-              {
-                Image: "https://i.imgur.com/nOT5zBD.jpeg"
-              },
-              {
-                Image: "https://i.imgur.com/BipVIkJ.jpeg"
-              },
-              {
-                Image: "https://i.imgur.com/ZM5xWH9.jpeg"
-              }
-            ].map((card, key) => (
-              <li key={key}>
-                <Card Image={card.Image} ImgAlign="top">
-                  <a href="/">Some Cute Cat Stuff</a>
-                  <p className="m-0 text-muted">
-                    Posted <abbr title="12th Sunday September 2021">today</abbr>
-                  </p>
-                </Card>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </FBBox>
+      {NewsFeeds.length && (
+        <FBBox>
+          <div className="FeedsContainer">
+            <h4 className="m-0">News Feed</h4>
+            <ul>
+              {NewsFeeds.map((card, key) => (
+                <li key={key}>
+                  <Card Image={card.Image} ImgAlign="top">
+                    <a href={card.NewsLink}>{card.Title}</a>
+                    <p className="m-0 text-muted">
+                      Posted{" "}
+                      <abbr title={card.DateTime}>{card.DatePosted}</abbr>
+                    </p>
+                  </Card>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </FBBox>
+      )}
     </div>
   );
 };
