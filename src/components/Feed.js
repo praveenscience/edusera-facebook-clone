@@ -5,7 +5,7 @@ import FBBox from "./FBBox";
 const Feed = ({ Birthdays, Pages, NewsFeeds }) => {
   return (
     <div className="col-3 Feed">
-      {Birthdays.length > 0 && (
+      {Birthdays && Birthdays.length > 0 && (
         <FBBox>
           <div className="BirthdayContainer">
             <img src="https://i.imgur.com/6AoNBzI.png" alt="Gift" />
@@ -19,7 +19,7 @@ const Feed = ({ Birthdays, Pages, NewsFeeds }) => {
           </div>
         </FBBox>
       )}
-      {Pages.length > 0 && (
+      {Pages && Pages.length > 0 && (
         <FBBox>
           <div className="PagesContainer">
             <h4>
@@ -54,7 +54,7 @@ const Feed = ({ Birthdays, Pages, NewsFeeds }) => {
           </div>
         </FBBox>
       )}
-      {NewsFeeds.length && (
+      {NewsFeeds && NewsFeeds.length && (
         <FBBox>
           <div className="FeedsContainer">
             <h4 className="m-0">News Feed</h4>
