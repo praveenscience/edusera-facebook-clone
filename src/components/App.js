@@ -7,9 +7,11 @@ import Sidebar from "./Sidebar";
 class App extends Component {
   state = {
     UserData: {
-      FullName: "Mark Zuckerberg",
-      Avatar: "",
-      ProfileURL: "/",
+      UserMeta: {
+        FullName: "Mark Zuckerberg",
+        Avatar: "https://i.imgur.com/QDBSMr2b.jpg",
+        ProfileURL: "/"
+      },
       Birthdays: [
         {
           FullName: "Sadaf Jamal",
@@ -62,7 +64,45 @@ class App extends Component {
           DateTime: "12th Sunday September 2021",
           DatePosted: "2 days ago"
         }
-      ]
+      ],
+      ContentList: {
+        Default: [
+          {
+            Link: "/",
+            Icon: "news",
+            Text: "News Feed"
+          },
+          {
+            Link: "/",
+            Icon: "chat",
+            Text: "Messenger"
+          },
+          {
+            Link: "/",
+            Icon: "watch",
+            Text: "Watch"
+          },
+          {
+            Link: "/",
+            Icon: "market",
+            Text: "Marketplace"
+          }
+        ],
+        Shortcuts: [
+          {
+            Link: "https://rb.gy/movl7r",
+            Icon: "web",
+            Text: "Personal Website"
+          }
+        ],
+        Explore: [
+          {
+            Link: "https://rb.gy/fupw21",
+            Icon: "yt",
+            Text: "YouTube Channel"
+          }
+        ]
+      }
     },
     FeedData: []
   };
@@ -72,7 +112,10 @@ class App extends Component {
         <Header className="Header">Facebook Clone</Header>
         <div className="container">
           <div className="row">
-            <Sidebar />
+            <Sidebar
+              ContentList={this.state.UserData.ContentList}
+              UserMeta={this.state.UserData.UserMeta}
+            />
             <Main />
             <Feed
               Birthdays={this.state.UserData.Birthdays}
