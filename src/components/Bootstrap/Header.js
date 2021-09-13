@@ -14,7 +14,7 @@ const Header = ({ dark, children, className, UserMeta }) => {
           <img src="/logo512.png" alt={children + " Logo"} className="me-2" />
           {children}
         </a>
-        <HeaderUserMeta {...UserMeta} />
+        {UserMeta && <HeaderUserMeta {...UserMeta} />}
       </div>
     </nav>
   );
