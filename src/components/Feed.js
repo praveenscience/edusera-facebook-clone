@@ -1,68 +1,59 @@
+import { Fragment } from "react";
 import Card from "./Bootstrap/Card";
 import FBBox from "./FBBox";
 
-const Feed = ({ Birthdays }) => {
+const Feed = ({ Birthdays, Pages }) => {
   return (
     <div className="col-3 Feed">
-      <FBBox>
-        <div className="BirthdayContainer">
-          <img src="https://i.imgur.com/6AoNBzI.png" alt="Gift" />
-          {Birthdays.map(user => (
-            <>
-              <a href={user.ProfileURL}>{user.FullName}</a>
-              {", "}
-            </>
-          ))}
-          and 3 others.
-        </div>
-      </FBBox>
-      <FBBox>
-        <div className="PagesContainer">
-          <h4>
-            Your Pages <span>(2)</span>
-          </h4>
-          <ul>
-            <li>
-              <img src="https://i.imgur.com/SrTKlVe.png" alt="Edusera" />
-              <div className="PageMeta">
-                <a href="/">
-                  <strong>Edusera</strong>
-                </a>
-                <a href="/">
-                  <img src="https://i.imgur.com/bwVSUrj.png" alt="Messages" />
-                  Messages (20+)
-                </a>
-                <a href="/">
-                  <img
-                    src="https://i.imgur.com/iU3hjYR.png"
-                    alt="Notifications"
-                  />
-                  Notifications (20+)
-                </a>
-              </div>
-            </li>
-            <li>
-              <img src="https://i.imgur.com/QDBSMr2b.jpg" alt="Zucku Mama" />
-              <div className="PageMeta">
-                <a href="/">
-                  <strong>Zucku Mama</strong>
-                </a>
-                <a href="/">
-                  <img src="https://i.imgur.com/bwVSUrj.png" alt="Messages" />
-                  Messages (20+)
-                </a>
-                <a href="/">
-                  <img
-                    src="https://i.imgur.com/iU3hjYR.png"
-                    alt="Notifications"
-                  />
-                  Notifications (20+)
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </FBBox>
+      {Birthdays.length > 0 && (
+        <FBBox>
+          <div className="BirthdayContainer">
+            <img src="https://i.imgur.com/6AoNBzI.png" alt="Gift" />
+            {Birthdays.map(user => (
+              <Fragment key={user.FullName}>
+                <a href={user.ProfileURL}>{user.FullName}</a>
+                {", "}
+              </Fragment>
+            ))}
+            and 3 others.
+          </div>
+        </FBBox>
+      )}
+      {Pages.length > 0 && (
+        <FBBox>
+          <div className="PagesContainer">
+            <h4>
+              Your Pages <span>({Pages.length})</span>
+            </h4>
+            <ul>
+              {Pages.map(page => (
+                <li key={page.Avatar}>
+                  <img src={page.Avatar} alt={page.Name} />
+                  <div className="PageMeta">
+                    <a href={page.PageURL}>
+                      <strong>{page.Name}</strong>
+                    </a>
+                    <a href="/">
+                      <img
+                        src="https://i.imgur.com/bwVSUrj.png"
+                        alt="Messages"
+                      />
+                      Messages ({page.MessageCount})
+                    </a>
+                    <a href="/">
+                      <img
+                        src="https://i.imgur.com/iU3hjYR.png"
+                        alt="Notifications"
+                      />
+                      Notifications ({page.NotificationCount})
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </FBBox>
+      )}
       <FBBox>
         <div className="FeedsContainer">
           <h4 className="m-0">News Feed</h4>
