@@ -30,7 +30,7 @@ class App extends Component {
                 ContentList={this.state.UserData.ContentList}
                 UserMeta={this.state.UserData.UserMeta}
               />
-              <Main />
+              <Main WallData={this.state.WallData} />
               <Feed
                 Birthdays={this.state.UserData.Birthdays}
                 Pages={this.state.UserData.Pages}
