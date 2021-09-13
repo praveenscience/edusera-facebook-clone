@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { GetUserData } from "../services/UserData";
+import { GetFeedData, GetUserData } from "../services/UserData";
 import Header from "./Bootstrap/Header";
 import Feed from "./Feed";
 import Main from "./Main";
@@ -12,6 +12,7 @@ class App extends Component {
   };
   componentDidMount() {
     GetUserData().then(({ data: UserData }) => this.setState({ UserData }));
+    GetFeedData().then(({ data: FeedData }) => this.setState({ FeedData }));
   }
   render() {
     return (
