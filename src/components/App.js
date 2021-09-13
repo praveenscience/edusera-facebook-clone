@@ -74,7 +74,11 @@ class App extends Component {
           <div className="row">
             <Sidebar />
             <Main />
-            <Feed />
+            <Feed
+              Birthdays={this.state.UserData.Birthdays}
+              Pages={this.state.UserData.Pages}
+              NewsFeeds={this.state.UserData.NewsFeeds}
+            />
           </div>
         </div>
       </div>
