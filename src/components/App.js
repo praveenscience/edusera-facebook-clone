@@ -109,7 +109,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header className="Header">Facebook Clone</Header>
+        <Header className="Header" UserMeta={this.state.UserData.UserMeta}>
+          Facebook Clone
+        </Header>
         <div className="container">
           <div className="row">
             <Sidebar
