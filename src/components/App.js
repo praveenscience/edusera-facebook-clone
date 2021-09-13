@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { GetFeedData, GetUserData } from "../services/UserData";
+import { GetWallData, GetUserData } from "../services/UserData";
 import Header from "./Bootstrap/Header";
 import Feed from "./Feed";
 import Main from "./Main";
@@ -8,11 +8,11 @@ import Sidebar from "./Sidebar";
 class App extends Component {
   state = {
     UserData: null,
-    FeedData: []
+    WallData: []
   };
   componentDidMount() {
     GetUserData().then(({ data: UserData }) => this.setState({ UserData }));
-    GetFeedData().then(({ data: FeedData }) => this.setState({ FeedData }));
+    GetWallData().then(({ data: WallData }) => this.setState({ WallData }));
   }
   render() {
     return (
