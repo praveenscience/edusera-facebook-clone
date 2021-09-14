@@ -1,4 +1,3 @@
-import React from "react";
 import HeaderUserMeta from "../HeaderUserMeta";
 
 const Header = ({ dark, children, className, UserMeta }) => {

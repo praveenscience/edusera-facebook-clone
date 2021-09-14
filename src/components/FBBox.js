@@ -1,5 +1,3 @@
-import React from "react";
-
 const FBBox = ({ Heading, children, className }) => {
   return (
     <div className={"FBBox" + (className ? " " + className : "")}>

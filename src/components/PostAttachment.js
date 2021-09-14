@@ -1,5 +1,3 @@
-import React from "react";
-
 const PostAttachment = ({ item }) => {
   return (
     item.Attachment && (

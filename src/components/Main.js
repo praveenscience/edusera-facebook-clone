@@ -1,4 +1,3 @@
-import React from "react";
 import FBBox from "./FBBox";
 import PostAttachment from "./PostAttachment";
 import PostUserMeta from "./PostUserMeta";
