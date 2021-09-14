@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "Text": "Hacktoberfest 2021 is coming! This October! Be ready! 👍🏻",
+    "Type": "Picture",
+    "Attachment": "https://i.imgur.com/b1YmEsq.png"
+  },
+  {
+    "Text": "Hacktoberfest 2021 is coming! Here's a quick way to learn Contributing to GitHub! 🤘🏻",
+    "Type": "Video",
+    "Attachment": "https://youtu.be/mECuof-1LT8"
+  },
+  {
+    "Text": "Hacktoberfest 2021 is coming! I'll keep posting awesome stuff! 😁",
+    "Type": "Text",
+    "Attachment": null
+  }
+]
