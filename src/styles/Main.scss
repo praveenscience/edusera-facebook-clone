@@ -62,4 +62,15 @@
       }
     }
   }
+  .PostActions {
+    color: #999;
+    padding: 3px 0 0;
+    font-size: 0.7em;
+    a {
+      font-size: 1.25em;
+      text-decoration: none;
+      display: inline-block;
+      padding: 0 2px;
+    }
+  }
 }
