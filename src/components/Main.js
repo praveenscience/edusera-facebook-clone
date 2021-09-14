@@ -1,4 +1,5 @@
 import FBBox from "./FBBox";
+import PostActions from "./PostActions";
 import PostAttachment from "./PostAttachment";
 import PostUserMeta from "./PostUserMeta";
 
@@ -11,6 +12,7 @@ const Main = ({ WallData }) => {
           <PostUserMeta {...item.UserMeta} />
           <p>{item.Text}</p>
           <PostAttachment item={item} />
+          <PostActions />
         </FBBox>
       ))}
     </div>
