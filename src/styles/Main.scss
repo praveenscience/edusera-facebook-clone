@@ -1,0 +1,28 @@
+.Main {
+  .PostUserMeta {
+    display: flex;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #f0f0f0;
+    > a {
+      display: block;
+      padding: 5px;
+      img {
+        border-radius: 5px;
+        display: block;
+        width: 48px;
+        height: 48px;
+      }
+    }
+    &-Meta {
+      p {
+        + p {
+          font-size: 0.85em;
+        }
+        a {
+          text-decoration: none;
+          color: #333;
+        }
+      }
+    }
+  }
+}
