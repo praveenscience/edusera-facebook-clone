@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import TimeAgo from "react-timeago";
 import Card from "./Bootstrap/Card";
 import FBBox from "./FBBox";
 
@@ -65,7 +66,9 @@ const Feed = ({ Birthdays, Pages, NewsFeeds }) => {
                     <a href={card.NewsLink}>{card.Title}</a>
                     <p className="m-0 text-muted">
                       Posted{" "}
-                      <abbr title={card.DateTime}>{card.DatePosted}</abbr>
+                      <abbr title={card.DateTime}>
+                        <TimeAgo date={card.DateTime} />
+                      </abbr>
                     </p>
                   </Card>
                 </li>
