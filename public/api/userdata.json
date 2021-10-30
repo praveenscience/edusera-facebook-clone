@@ -39,22 +39,19 @@
       "Image": "https://i.imgur.com/nOT5zBD.jpeg",
       "NewsLink": "/",
       "Title": "Best Cat Foods",
-      "DateTime": "12th Sunday September 2021",
-      "DatePosted": "today"
+      "DateTime": "2021-09-12T16:30:00.000Z"
     },
     {
       "Image": "https://i.imgur.com/BipVIkJ.jpeg",
       "NewsLink": "/",
       "Title": "Hello Kitties!",
-      "DateTime": "12th Sunday September 2021",
-      "DatePosted": "yesterday"
+      "DateTime": "2021-09-12T15:30:00.000Z"
     },
     {
       "Image": "https://i.imgur.com/ZM5xWH9.jpeg",
       "NewsLink": "/",
       "Title": "Some Cute Cat Stuff",
-      "DateTime": "12th Sunday September 2021",
-      "DatePosted": "2 days ago"
+      "DateTime": "2021-09-12T12:30:00.000Z"
     }
   ],
   "ContentList": {
